@@ -14,15 +14,18 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         ConsoleUI ui = new ConsoleUI(scanner);
         TodoListManager lm = new TodoListManager();
+
         boolean running = true;
 
         while (running) {
-            int option = ui.promptMenu("Select an option:","View Tasks","Add Task","Remove Task","Exit");
+            int option = ConsoleMenus.showMainMenu(ui);
 
             switch (option) {
                 case 1 -> lm.listTasks();
                 case 2 -> lm.createTask();
-                case 4 -> running = false;
+                case 3 -> ConsoleMenus.findTaskMenu(ui, lm);
+                //case 4 -> lm.removeTask();
+                case 5 -> running = false;
                 default -> ui.printLine("Invalid option.");
             }
         }

@@ -32,6 +32,7 @@ public class ConsoleUI {
 
     public void printTask(TodoItem item) {
         System.out.println("----------------------------");
+        System.out.println("ID: " + item.id);
         System.out.println("Name: " + item.name);
         System.out.println("Desc: " + item.desc);
         System.out.println("Start Date: " + item.startDate.toString());
