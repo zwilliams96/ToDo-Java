@@ -34,6 +34,12 @@ public class TodoListManager {
         items.add(new TodoItem(nextID++,name, desc, startDate, dueDate, false));
     }
 
+    public void removeTask() {
+        int id = ui.promptInt("Enter Task ID to Remove:");
+        Optional<TodoItem> task = findTaskById(id);
+        task.ifPresent(todoItem -> items.remove(todoItem));
+    }
+
     public Optional<TodoItem> findTaskById(int id) {
         return items.stream().filter(task -> task.getID() == id).findFirst();
     }
