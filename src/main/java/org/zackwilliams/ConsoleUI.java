@@ -37,6 +37,7 @@ public class ConsoleUI {
         System.out.println("Desc: " + item.desc);
         System.out.println("Start Date: " + item.startDate.toString());
         System.out.println("Due Date: " + item.dueDate.toString());
+        System.out.println("Completed: " + item.isCompleted);
         System.out.println("----------------------------");
     }
 

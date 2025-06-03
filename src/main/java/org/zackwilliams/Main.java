@@ -25,9 +25,12 @@ public class Main {
                 case 2 -> lm.createTask();
                 case 3 -> ConsoleMenus.findTaskMenu(ui, lm);
                 case 4 -> lm.removeTask();
-                case 5 -> running = false;
+                case 5 -> lm.completeTask();
+                case 6 -> running = false;
                 default -> ui.printLine("Invalid option.");
             }
         }
+
+        lm.safeState();
     }
 }

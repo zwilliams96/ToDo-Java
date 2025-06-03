@@ -19,6 +19,10 @@ public class TodoItem {
         this.isCompleted = isCompleted;
     }
 
+    public TodoItem(){
+
+    }
+
     public int getID() {
         return id;
     }

@@ -7,6 +7,7 @@ public class ConsoleMenus {
                 "Add Task",
                 "Find Task",
                 "Remove Task",
+                "Complete Task",
                 "Exit");
     }
 
